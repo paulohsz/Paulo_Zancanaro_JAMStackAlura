@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-// eslint-disable-next-line import/no-extraneous-dependencies
-// import get from 'lodash/get';
+import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import propToStyle from '../../../theme/utils/propToStyle';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
@@ -43,11 +42,11 @@ export const TextStyleVariants = {
   `,
 };
 
-/* color: ${({ theme, color }) =>
-  get(theme, `colors.${color}.color`)}; */
 const TextBase = styled.span`
+  color: ${({ theme, color }) => get(theme, `colors.${color}.color`)}; 
   ${({ variant }) => TextStyleVariants[variant]}
-  ${propToStyle('textAlign')}
+  ${propToStyle('padding')}
+  ${propToStyle('borderBottom')}
 `;
 
 export default function Text({
