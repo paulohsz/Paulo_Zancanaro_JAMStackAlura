@@ -13,23 +13,33 @@ export const colorsType = {
     },
     primary: {
       main: {
-        color: '#D7385E',
+        color: '#F5F5F5',
         contrastText: '#fff',
       },
     },
     secondary: {
       main: {
-        color: '#FB7B6B',
-        contrastText: '#fff',
+        color: '#181B33',
+        contrastText: '#F5F5F5',
+      },
+    },
+    quaternary: {
+      main: {
+        color: '#9FB6D0',
+        contrastText: '#22263F',
       },
     },
     tertiary: {
       main: {
-        color: '#070C0E',
+        color: '#F2F2F2',
         contrastText: '#fff',
       },
       light: {
         color: '#88989E',
+        contrastText: '#fff',
+      },
+      dark: {
+        color: '#888888',
         contrastText: '#fff',
       },
     },
