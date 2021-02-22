@@ -20,4 +20,16 @@ module.exports = {
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
   },
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [
+          ['@components', './src/components/'],
+          ['@contexts', './src/contexts/'],
+          ['@theme', './src/theme/'],
+        ],
+        extensions: ['.ts', '.js', '.jsx', '.json'],
+      },
+    },
+  },
 };
