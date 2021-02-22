@@ -18,8 +18,6 @@ const Base = styled(Box)`
   &:focus {
     opacity: .75;
   }
-
-  
 `;
 
 const Img = styled.img`
