@@ -1,56 +1,17 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import styled, { css } from 'styled-components';
-import Text from '../../foundation/Text';
-import Grid from '../../layout/Grid';
 
+import Grid from '../../layout/Grid';
 import Box from '../../layout/Box';
-import polygonClip from '../../../theme/utils/polygonClip';
+
+import Text from '../../foundation/Text';
+
 import Button from '../Button';
+
 import Git from '../../../theme/svg/Git';
 import Linkedin from '../../../theme/svg/Linkedin';
 import Email from '../../../theme/svg/Email';
 import Phone from '../../../theme/svg/Phone';
-
-const FooterWrapper = styled.footer`
-
-  ${polygonClip('polygonTop')}
-  background-color: ${({ theme }) => theme.colors.background.dark};
-  
-  h1 {
-    ${({ theme }) => css`
-      font-size: ${theme.typographyVariants.titleXS.fontSize};
-      font-weight: ${theme.typographyVariants.titleXS.fontWeight};
-      line-height: ${theme.typographyVariants.titleXS.lineHeight};
-      color: ${theme.colors.primary.main.color};
-    `}
-  }
-  ul {
-    padding: 0px;
-    margin-bottom: 22px;
-  }
-  ul li {
-    list-style:none;
-    display: flex;
-    align-items: center;
-    color: ${({ theme }) => theme.colors.quaternary.main.color};
-    margin-bottom: 12px;
-    height: 26px;
-  }
-  svg {
-    fill: ${({ theme }) => theme.colors.quaternary.main.color};
-    width: 24px;
-    margin-right: 12px;
-  }
-  a {
-    text-decoration: none;
-    color: ${({ theme }) => theme.colors.quaternary.main.color};    transition: .3s;
-    &:hover,
-      &:focus {
-        opacity: .5;
-      }
-  }
-`;
+import FooterWrapper from './styles';
 
 export default function Footer() {
   return (
@@ -81,7 +42,7 @@ export default function Footer() {
                 md: 'left',
               }}
             >
-              Have a project you&apos;d like to discuss?
+              Do you know of any jobs?
             </Text>
             <Button
               variant="secondary.dark"
@@ -102,27 +63,25 @@ export default function Footer() {
             <ul>
               <li>
                 <Git />
-                <a href="#">
+                <a href="https://github.com/paulohsz" target="_blank" rel="noreferrer">
                   github.com/paulohsz
                 </a>
               </li>
               <li>
                 <Linkedin />
-                <a href="#">
+                <a href="https://www.linkedin.com/in/paulohsz/" target="_blank" rel="noreferrer">
                   linkedin.com/in/paulohsz
                 </a>
               </li>
               <li>
                 <Email />
-                <a href="#">
+                <a href="mailto: paulostoc@gmail.com">
                   paulostoc@gmail.com
                 </a>
               </li>
               <li>
                 <Phone />
-                <a href="#">
-                  +353 83 334 1449 (Ireland)
-                </a>
+                +353 83 334 1449 (Ireland)
               </li>
             </ul>
           </Grid.Col>
