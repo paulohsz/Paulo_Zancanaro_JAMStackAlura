@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../../../theme/Logo';
+import Logo from '../../../theme/svg/Logo';
 import Text from '../../foundation/Text';
 import MenuWrapper from './styles/MenuWrapper';
 
