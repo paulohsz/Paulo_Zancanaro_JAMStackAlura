@@ -89,6 +89,7 @@ const Col = styled.div`
   ${propToStyle('alignItems')}
   ${propToStyle('justifyContent')}
   ${propToStyle('flexDirection')}
+  ${propToStyle('margin')}
 
 `;
 
