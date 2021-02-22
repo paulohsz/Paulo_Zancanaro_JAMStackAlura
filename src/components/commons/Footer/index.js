@@ -9,6 +9,7 @@ import Git from '@theme/svg/Git';
 import Linkedin from '@theme/svg/Linkedin';
 import Email from '@theme/svg/Email';
 import Phone from '@theme/svg/Phone';
+import Favorite from '@theme/svg/Favorite';
 import FooterWrapper from './styles';
 
 export default function Footer() {
@@ -93,10 +94,9 @@ export default function Footer() {
         borderTop="1px solid #9FB6D040"
       >
         <Text padding="16px 0" color="tertiary.dark">
-          © 2021 Paulo H S Zancanaro. Made with love &hearts;
-          {' '}
-          <i className="im im-heart" />
-          {' '}
+          © 2021 Paulo H S Zancanaro. Made with love
+          <Favorite className="favorite" />
+          <br />
           All rights reserved
         </Text>
       </Box>
