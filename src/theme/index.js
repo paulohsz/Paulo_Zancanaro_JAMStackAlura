@@ -28,6 +28,10 @@ export const colorsType = {
         color: '#9FB6D0',
         contrastText: '#22263F',
       },
+      dark: {
+        color: '#22263F',
+        contrastText: '#9FB6D0',
+      },
     },
     tertiary: {
       main: {
@@ -49,39 +53,52 @@ export const colorsType = {
   },
   dark: {
     background: {
-      main: {
-        color: '#030506',
-      },
+      main: '#F5F5F5',
+      dark: '#22263F',
     },
     borders: {
       main: {
-        color: '#181F22',
+        color: '#F1F1F1',
       },
     },
     primary: {
       main: {
-        color: '#D7385E',
+        color: '#F5F5F5',
         contrastText: '#fff',
       },
     },
     secondary: {
       main: {
-        color: '#FFA59A',
-        contrastText: '#fff',
+        color: '#181B33',
+        contrastText: '#F5F5F5',
+      },
+    },
+    quaternary: {
+      main: {
+        color: '#9FB6D0',
+        contrastText: '#22263F',
+      },
+      dark: {
+        color: '#22263F',
+        contrastText: '#9FB6D0',
       },
     },
     tertiary: {
       main: {
-        color: '#FFFFFF',
-        contrastText: '#030506',
+        color: '#F2F2F2',
+        contrastText: '#fff',
       },
       light: {
-        color: '#D4D4D4',
-        contrastText: '#030506',
+        color: '#88989E',
+        contrastText: '#fff',
+      },
+      dark: {
+        color: '#888888',
+        contrastText: '#fff',
       },
     },
     svg: {
-      color: '#FFFFFF',
+      color: '#070C0E',
     },
   },
 };
