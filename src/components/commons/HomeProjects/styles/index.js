@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Text from '../../../foundation/Text';
-import Box from '../../../layout/Box';
+import Text from '@components/foundation/Text';
+import Box from '@components/layout/Box';
 
 const Base = styled(Box)`
 

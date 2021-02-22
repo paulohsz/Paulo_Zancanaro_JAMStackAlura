@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import polygonClip from '../../../../theme/utils/polygonClip';
+import polygonClip from '@theme/utils/polygonClip';
 
 const FooterWrapper = styled.footer`
 

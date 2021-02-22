@@ -1,10 +1,10 @@
 import React from 'react';
 import { useTheme } from 'styled-components';
-import Footer from '../src/components/commons/Footer';
-import HomeAbout from '../src/components/commons/HomeAbout';
-import HomeProjects from '../src/components/commons/HomeProjects';
-import Menu from '../src/components/commons/Menu';
-import Box from '../src/components/layout/Box';
+import Footer from '@components/commons/Footer';
+import HomeAbout from '@components/commons/HomeAbout';
+import HomeProjects from '@components/commons/HomeProjects';
+import Menu from '@components/commons/Menu';
+import Box from '@components/layout/Box';
 
 export default function Home() {
   const { background } = useTheme().colors;

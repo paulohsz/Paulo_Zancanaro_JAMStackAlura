@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import polygonClip from '../../../theme/utils/polygonClip';
-import propToStyle from '../../../theme/utils/propToStyle';
+import polygonClip from '@theme/utils/polygonClip';
+import propToStyle from '@theme/utils/propToStyle';
 
 const Box = styled.div`
   ${propToStyle('display')}

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import Head from 'next/head';
-import theme, { colorsType } from '../src/theme';
-import GlobalStyle from '../src/theme/GlobalStyle';
-import ThemeContext from '../src/contexts/theme';
+import GlobalStyle from '@theme/GlobalStyle';
+import ThemeContext from '@contexts/theme';
+import theme, { colorsType } from '@theme/theme';
 
 // eslint-disable-next-line react/prop-types
 export default function App({ Component, pageProps }) {

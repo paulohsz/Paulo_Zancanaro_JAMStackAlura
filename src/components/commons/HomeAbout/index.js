@@ -1,6 +1,6 @@
 import React from 'react';
-import Text from '../../foundation/Text';
-import Grid from '../../layout/Grid';
+import Text from '@components/foundation/Text';
+import Grid from '@components/layout/Grid';
 
 export default function HomeAbout() {
   return (

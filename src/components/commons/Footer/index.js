@@ -1,16 +1,14 @@
 import React from 'react';
 
-import Grid from '../../layout/Grid';
-import Box from '../../layout/Box';
+import Grid from '@components/layout/Grid';
+import Box from '@components/layout/Box';
+import Text from '@components/foundation/Text';
+import Button from '@components/commons/Button';
 
-import Text from '../../foundation/Text';
-
-import Button from '../Button';
-
-import Git from '../../../theme/svg/Git';
-import Linkedin from '../../../theme/svg/Linkedin';
-import Email from '../../../theme/svg/Email';
-import Phone from '../../../theme/svg/Phone';
+import Git from '@theme/svg/Git';
+import Linkedin from '@theme/svg/Linkedin';
+import Email from '@theme/svg/Email';
+import Phone from '@theme/svg/Phone';
 import FooterWrapper from './styles';
 
 export default function Footer() {

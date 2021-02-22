@@ -1,6 +1,6 @@
 import React from 'react';
-import Logo from '../../../theme/svg/Logo';
-import Text from '../../foundation/Text';
+import Logo from '@theme/svg/Logo';
+import Text from '@components/foundation/Text';
 import MenuWrapper from './styles/MenuWrapper';
 
 const links = [
