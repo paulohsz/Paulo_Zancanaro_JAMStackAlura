@@ -1,7 +1,7 @@
 import React from 'react';
 import Text from '@components/foundation/Text';
 import Grid from '@components/layout/Grid';
-import Card from './styles';
+import Card from '@components/commons/Card';
 
 const projects = [
   {
