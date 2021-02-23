@@ -17,12 +17,12 @@ const GlobalStyle = createGlobalStyle`
   /* Full height layout */
   html, body {
     display: flex;
-    min-height: 100vh;
+    min-height: 100%;
     width: 100%;
   }
   #__next {
-    flex: 1;
     display: flex;
+    flex: 1;
     flex-direction: column;
   }
 `;
