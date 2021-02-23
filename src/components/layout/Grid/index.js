@@ -107,6 +107,12 @@ const Grid = {
     margin-left: auto;
 
     ${propToStyle('marginTop')}
+    ${propToStyle('flex')}
+    ${propToStyle('flexGrow')}
+    ${propToStyle('display')}
+    ${propToStyle('alignItems')}
+    ${propToStyle('justifyContent')}
+    
 
     ${breakpointsMedia({
     xs: css`
