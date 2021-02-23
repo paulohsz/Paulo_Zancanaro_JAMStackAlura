@@ -26,22 +26,27 @@ const projects = [
 
 export default function HomeProjects() {
   return (
-    <Grid.Container>
+    <Grid.Container
+      display="flex"
+      flex-grow={1}
+      alignItems="center"
+    >
       <Grid.Row>
-        <Text
-          variant="title"
-          tag="h1"
-          color="primary.secondary"
-          borderBottom="2px solid #181B33"
-          textAlign={{
-            xs: 'center',
-            md: 'left',
-          }}
+        <Grid.Col
+          value={12}
+          display="flex"
+          margin="16px 0px"
         >
-          Projects
-        </Text>
-      </Grid.Row>
-      <Grid.Row>
+          <Text
+            variant="title"
+            tag="h1"
+            color="primary.secondary"
+            borderBottom="2px solid #181B33"
+            margin={0}
+          >
+            Projects
+          </Text>
+        </Grid.Col>
         {projects.map((project) => (
           <Grid.Col
             value={{ xs: 12, sm: 6, md: 4 }}
