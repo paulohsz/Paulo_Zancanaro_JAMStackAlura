@@ -52,6 +52,8 @@ export default function HomeAbout() {
               borderRadius: '16px',
             }}
             src="images/ProfilePhoto.jpg"
+            width="235"
+            height="308"
           />
         </Grid.Col>
       </Grid.Row>
