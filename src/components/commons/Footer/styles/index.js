@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import polygonClip from '../../../../theme/utils/polygonClip';
+import polygonClip from '@theme/utils/polygonClip';
 
 const FooterWrapper = styled.footer`
 
@@ -31,9 +31,15 @@ const FooterWrapper = styled.footer`
     width: 24px;
     margin-right: 12px;
   }
+  svg.favorite {
+    fill: ${({ theme }) => theme.colors.tertiary.dark.color};
+    width: 16px;
+    margin: 0px 0px 0px 6px;
+  }
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.colors.quaternary.main.color};    transition: .3s;
+    color: ${({ theme }) => theme.colors.quaternary.main.color};
+    transition: .3s;
     &:hover,
       &:focus {
         opacity: .5;

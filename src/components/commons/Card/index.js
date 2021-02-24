@@ -1,14 +1,14 @@
 import styled from 'styled-components';
-import Text from '../../../foundation/Text';
-import Box from '../../../layout/Box';
+import Text from '@components/foundation/Text';
+import Box from '@components/layout/Box';
 
 const Base = styled(Box)`
-
   overflow: hidden;
   background: #FFFFFF;
   box-shadow: 3px 3px 4px 1px rgba(24, 27, 51, 0.15);
   border-radius: 16px;
   transition: 0.4s ease all;
+  flex-grow: 1;
   
   a {
     text-decoration: none;
@@ -18,8 +18,6 @@ const Base = styled(Box)`
   &:focus {
     opacity: .75;
   }
-
-  
 `;
 
 const Img = styled.img`

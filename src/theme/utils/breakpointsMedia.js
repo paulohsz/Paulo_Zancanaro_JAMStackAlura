@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import { breakpoints } from '../index';
+import { breakpoints } from '@theme/theme';
 
 export default function breakpointsMedia(cssByBreakpoint) {
   const breakpointNames = Object.keys(breakpoints);

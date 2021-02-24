@@ -1,6 +1,6 @@
 import React from 'react';
-import Text from '../../foundation/Text';
-import Grid from '../../layout/Grid';
+import Text from '@components/foundation/Text';
+import Grid from '@components/layout/Grid';
 
 export default function HomeAbout() {
   return (
@@ -52,6 +52,8 @@ export default function HomeAbout() {
               borderRadius: '16px',
             }}
             src="images/ProfilePhoto.jpg"
+            width="235"
+            height="308"
           />
         </Grid.Col>
       </Grid.Row>
