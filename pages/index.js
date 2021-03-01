@@ -13,9 +13,11 @@ export default function Home() {
     <>
       <Box
         flex={1}
+        display="flex"
         flexWrap="wrap"
         flexDirection="column"
         justifyContent="space-between"
+        alignItems="stretch"
         backgroundColor={background.dark}
         polygonBottom={{ lg: 75, xs: 50 }}
       >
