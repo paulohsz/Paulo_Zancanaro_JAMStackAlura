@@ -28,7 +28,7 @@ export default function HomeProjects() {
   return (
     <Grid.Container
       display="flex"
-      flex-grow={1}
+      flexGrow={1}
       alignItems="center"
     >
       <Grid.Row>
