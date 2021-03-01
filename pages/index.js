@@ -4,7 +4,7 @@ import Footer from '@components/commons/Footer';
 import HomeAbout from '@components/commons/HomeAbout';
 import HomeProjects from '@components/commons/HomeProjects';
 import Menu from '@components/commons/Menu';
-import Box from '@components/layout/Box';
+import Box from '@components/foundation/layout/Box';
 
 export default function Home() {
   const { background } = useTheme().colors;

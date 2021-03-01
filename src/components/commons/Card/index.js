@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Text from '@components/foundation/Text';
-import Box from '@components/layout/Box';
+import Box from '@components/foundation/layout/Box';
 
 const Base = styled(Box)`
   overflow: hidden;
