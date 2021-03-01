@@ -4,7 +4,12 @@ import Grid from '@components/layout/Grid';
 
 export default function HomeAbout() {
   return (
-    <Grid.Container marginTop={{ xs: '32px', md: '75px' }}>
+    <Grid.Container
+      marginTop={{ xs: '32px', md: '75px' }}
+      display="flex"
+      flexGrow={1}
+      alignItems="center"
+    >
       <Grid.Row>
         <Grid.Col
           offset={{ xs: 0, md: 1 }}
