@@ -7,16 +7,36 @@ export default function polygonClip(propName) {
 
     const clipPadding = (size) => {
       if (propName === 'polygonBottom') {
-        return {
-          clipPath: `polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - ${size}px))`,
-          paddingBottom: size,
-        };
+        return css`
+          animation: transitionBottom .75s ease-in;
+          padding-bottom: ${size}px;
+          clip-path: ${`polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - ${size}px))`};
+
+          @keyframes transitionBottom {
+            0% {
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+            100% {
+              clip-path: ${`polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - ${size}px))`};
+            }
+          }
+        `;
       }
 
-      return {
-        clipPath: `polygon(0 0, 100% ${size}px, 100% 100%, 0 100%)`,
-        paddingTop: size,
-      };
+      return css`
+          animation: transitionTop .75s ease-in;
+          padding-top: ${size}px;
+          clip-path: ${`polygon(0 0, 100% ${size}px, 100% 100%, 0 100%)`};
+
+          @keyframes transitionTop {
+            0% {
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+            100% {
+              clip-path: ${`polygon(0 0, 100% ${size}px, 100% 100%, 0 100%)`};
+            }
+          }
+        `;
     };
 
     if (typeof polygon !== 'number' && typeof polygon !== 'object') return;
