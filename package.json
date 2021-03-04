@@ -10,7 +10,7 @@
     "commit": "cz"
   },
   "dependencies": {
-    "framer-motion": "^3.9.1",
+    "framer-motion": "^3.10.0",
     "lodash": "^4.17.21",
     "next": "latest",
     "prop-types": "^15.7.2",
