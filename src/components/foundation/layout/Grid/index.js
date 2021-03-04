@@ -121,18 +121,18 @@ const Grid = {
         padding-left: 28px;
       `,
     sm: css`
-        max-width: 576px;
+        max-width: ${({ theme }) => theme.breakpoints.sm}px;
       `,
     md: css`
-        max-width: 768px;
+        max-width: ${({ theme }) => theme.breakpoints.md}px;
         padding-right: 16px;
         padding-left: 16px;
       `,
     lg: css`
-        max-width: 1160px;
+        max-width: ${({ theme }) => theme.breakpoints.lg}px;
       `,
     xl: css`
-        max-width: 1222px;
+        max-width: ${({ theme }) => theme.breakpoints.xl}px;;
       `,
   })}
   `,
