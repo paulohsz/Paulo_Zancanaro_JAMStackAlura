@@ -40,7 +40,7 @@ export default function HomeProjects() {
           <Text
             variant="title"
             tag="h1"
-            color="primary.secondary"
+            color="secondary.main"
             borderBottom="2px solid #181B33"
             margin={0}
           >
