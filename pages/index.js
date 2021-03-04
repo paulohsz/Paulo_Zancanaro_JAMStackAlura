@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Box
-        flex={1}
+        flexGrow={1}
         display="flex"
         flexWrap="wrap"
         flexDirection="column"
