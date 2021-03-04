@@ -26,10 +26,10 @@ function Modal({ isOpen, onClose, children }) {
       <motion.div
         variants={{
           open: {
-            x: 0,
+            y: 0,
           },
           closed: {
-            x: '100%',
+            y: '100%',
           },
         }}
         animate={isOpen ? 'open' : 'closed'}
@@ -37,8 +37,10 @@ function Modal({ isOpen, onClose, children }) {
           duration: 0.5,
         }}
         style={{
+          margin: 'auto',
           display: 'flex',
-          flex: 1,
+          flexDirection: 'column',
+          justifyContent: 'center',
         }}
       >
         {children({

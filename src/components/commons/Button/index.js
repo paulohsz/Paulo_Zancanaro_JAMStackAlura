@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import get from 'lodash/get';
 import { TextStyleVariants } from '@components/foundation/Text';
-import breakpointsMedia from '@theme/utils/breakpointsMedia';
 import propToStyle from '@theme/utils/propToStyle';
 
 const ButtonGhost = css`
@@ -24,7 +23,12 @@ const Button = styled.button`
   transition: opacity ${({ theme }) => theme.transition};
   border-radius: ${({ theme }) => theme.borderRadius};
 
-  ${({ ghost }) => (ghost ? ButtonGhost : ButtonDefault)}
+  ${({ theme }) => css`
+    transition: opacity ${theme.transition};
+    border-radius: ${theme.borderRadius};
+  `};
+  
+  ${TextStyleVariants.paragraph1}
 
   &:hover,
   &:focus {
@@ -34,14 +38,16 @@ const Button = styled.button`
   ${propToStyle('margin')}
   ${propToStyle('display')}
 
-  ${breakpointsMedia({
-    xs: css` 
-      ${TextStyleVariants.smallestException}
-    `,
-    md: css` 
-      ${TextStyleVariants.paragraph1}
-    `,
-  })}
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .2;
+  }
+
+  ${({ ghost }) => (ghost ? ButtonGhost : ButtonDefault)}
+
+  ${({ fullWidth }) => fullWidth && css`
+    width: 100%;
+  `};
 
 `;
 

@@ -14,7 +14,7 @@ export const colorsType = {
     primary: {
       main: {
         color: '#F5F5F5',
-        contrastText: '#fff',
+        contrastText: '#181B33',
       },
     },
     secondary: {

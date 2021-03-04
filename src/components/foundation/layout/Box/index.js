@@ -10,10 +10,14 @@ const Box = styled.div`
   ${propToStyle('flex')}
   ${propToStyle('flexWrap')}
   ${propToStyle('borderTop')}
+  ${propToStyle('borderRadius')}
   ${propToStyle('backgroundColor')}
   ${propToStyle('backgroundImage')}
   ${propToStyle('backgroundRepeat')}
   ${propToStyle('backgroundPosition')}
+
+  ${propToStyle('margin')}
+  ${propToStyle('padding')}
   
   ${polygonClip('polygonBottom')}
   ${polygonClip('polygonTop')}
