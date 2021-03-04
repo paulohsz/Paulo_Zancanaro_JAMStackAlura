@@ -7,6 +7,7 @@ const Box = styled.div`
   ${propToStyle('flexDirection')}
   ${propToStyle('justifyContent')}
   ${propToStyle('textAlign')}
+  ${propToStyle('flexGrow')}
   ${propToStyle('flex')}
   ${propToStyle('flexWrap')}
   ${propToStyle('borderTop')}
