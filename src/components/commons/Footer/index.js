@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import Grid from '@components/foundation/layout/Grid';
 import Box from '@components/foundation/layout/Box';
 import Text from '@components/foundation/Text';
 import Button from '@components/commons/Button';
-import Modal from '@components/commons/Modal';
-import FormContact from '@components/patterns/FormContact';
 
 import Git from '@theme/svg/Git';
 import Linkedin from '@theme/svg/Linkedin';
@@ -14,22 +13,9 @@ import Phone from '@theme/svg/Phone';
 import Favorite from '@theme/svg/Favorite';
 import FooterWrapper from './styles';
 
-export default function Footer() {
-  const [isModalOpen, setModalState] = useState(false);
-
+export default function Footer({ contact }) {
   return (
     <>
-      <Modal
-        isOpen={isModalOpen}
-        onClose={() => {
-          setModalState(false);
-        }}
-      >
-        {(propsDoModal) => (
-          // eslint-disable-next-line react/jsx-props-no-spreading
-          <FormContact propsDoModal={propsDoModal} />
-        )}
-      </Modal>
       <FooterWrapper polygonTop={{ lg: 75, xs: 50 }}>
         <Grid.Container>
           <Grid.Row>
@@ -66,9 +52,7 @@ export default function Footer() {
                   md: 'initial',
                 }}
                 display="block"
-                onClick={() => {
-                  setModalState(!isModalOpen); // novo state sendo atribuido
-                }}
+                onClick={contact}
               >
                 Get in touch
               </Button>
@@ -123,3 +107,7 @@ export default function Footer() {
     </>
   );
 }
+
+Footer.propTypes = {
+  contact: PropTypes.func.isRequired,
+};
