@@ -17,7 +17,24 @@ export default function Menu({ contact }) {
   ];
 
   return (
-    <MenuWrapper>
+    <MenuWrapper
+      initial="hidden"
+      animate="visible"
+      variants={{
+        visible: {
+          y: 0,
+          opacity: 1,
+        },
+        hidden: {
+          y: '-100%',
+          opacity: 0,
+        },
+      }}
+      transition={{
+        duration: 0.25,
+      }}
+    >
+      <h2>Menu</h2>
       <MenuWrapper.LeftSide>
         <Logo />
       </MenuWrapper.LeftSide>

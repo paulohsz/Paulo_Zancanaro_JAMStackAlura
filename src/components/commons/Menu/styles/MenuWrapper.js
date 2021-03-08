@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components';
 import breakpointsMedia from '@theme/utils/breakpointsMedia';
 import { TextStyleVariants } from '@components/foundation/Text';
+import { motion } from 'framer-motion';
 
-const MenuWrapper = styled.nav`
+const MenuWrapper = styled(motion.nav)`
   font-family: ${({ theme }) => theme.fontFamily};
   display: flex;
   align-items: center;
@@ -13,6 +14,10 @@ const MenuWrapper = styled.nav`
   padding-right: 16px;
 
   a:hover .hover-item{font-weight:bold}
+
+  h2 {
+    display: none;
+  }
 
 
 ${breakpointsMedia({
