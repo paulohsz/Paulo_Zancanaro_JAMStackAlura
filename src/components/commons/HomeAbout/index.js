@@ -74,14 +74,14 @@ export default function HomeAbout() {
               visible: {
                 opacity: 1,
                 scale: 1,
+                transition: {
+                  delay: 0.5,
+                },
               },
               hidden: {
                 opacity: 0,
                 scale: 2,
               },
-            }}
-            transition={{
-              duration: 0.5,
             }}
             alt="Paulo H S Zancanaro's profile"
             style={{
