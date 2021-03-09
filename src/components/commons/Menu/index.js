@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Logo from '@theme/svg/Logo';
 import Text from '@components/foundation/Text';
+import { motion } from 'framer-motion';
 import MenuWrapper from './styles/MenuWrapper';
 
 export default function Menu({ contact }) {
@@ -18,6 +19,7 @@ export default function Menu({ contact }) {
 
   return (
     <MenuWrapper
+      as={motion.nav}
       initial="hidden"
       animate="visible"
       variants={{

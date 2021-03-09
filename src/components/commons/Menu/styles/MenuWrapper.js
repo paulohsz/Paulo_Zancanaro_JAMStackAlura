@@ -1,9 +1,8 @@
 import styled, { css } from 'styled-components';
 import breakpointsMedia from '@theme/utils/breakpointsMedia';
 import { TextStyleVariants } from '@components/foundation/Text';
-import { motion } from 'framer-motion';
 
-const MenuWrapper = styled(motion.nav)`
+const MenuWrapper = styled.nav`
   font-family: ${({ theme }) => theme.fontFamily};
   display: flex;
   align-items: center;
