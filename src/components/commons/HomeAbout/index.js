@@ -80,7 +80,7 @@ export default function HomeAbout() {
               },
               hidden: {
                 opacity: 0,
-                scale: 2,
+                scale: 1.5,
               },
             }}
             alt="Paulo H S Zancanaro's profile"

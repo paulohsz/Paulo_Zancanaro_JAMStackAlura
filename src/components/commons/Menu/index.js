@@ -36,7 +36,6 @@ export default function Menu({ contact }) {
         duration: 0.25,
       }}
     >
-      <h2>Menu</h2>
       <MenuWrapper.LeftSide>
         <Logo />
       </MenuWrapper.LeftSide>
