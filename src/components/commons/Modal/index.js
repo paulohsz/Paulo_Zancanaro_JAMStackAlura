@@ -37,7 +37,7 @@ function Modal({ isOpen, onClose, children }) {
           duration: 0.5,
         }}
         style={{
-          margin: 'auto',
+          margin: `${isOpen ? 'auto' : '0px auto'}`,
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',

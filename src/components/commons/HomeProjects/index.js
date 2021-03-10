@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Text from '@components/foundation/Text';
 import Grid from '@components/foundation/layout/Grid';
 import Card from '@components/commons/Card';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const projects = [
   {
@@ -24,20 +26,66 @@ const projects = [
   },
 ];
 
+const variants = {
+  visible: (i) => ({
+    opacity: 1,
+    y: '0',
+    transition: {
+      delay: ((i + 1) * 0.35),
+    },
+  }),
+  hidden: {
+    y: '50%',
+    opacity: 0,
+  },
+};
+
 export default function HomeProjects() {
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+    /* if (!inView) {
+      controls.start('hidden');
+    } */
+  }, [controls, inView]);
+
   return (
     <Grid.Container
       display="flex"
       flexGrow={1}
       alignItems="center"
     >
-      <Grid.Row>
+      <Grid.Row ref={ref}>
         <Grid.Col
           value={12}
           display="flex"
           margin="16px 0px"
+          style={{
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+          }}
         >
           <Text
+            as={motion.h1}
+            initial="hidden"
+            animate="visible"
+            variants={{
+              visible: {
+                opacity: 1,
+                scale: 1,
+                transition: {
+                  delay: 0.25,
+                },
+              },
+              hidden: {
+                opacity: 0,
+                scale: 2,
+              },
+            }}
             variant="title"
             tag="h1"
             color="secondary.main"
@@ -47,8 +95,9 @@ export default function HomeProjects() {
             Projects
           </Text>
         </Grid.Col>
-        {projects.map((project) => (
+        {projects.map((project, i) => (
           <Grid.Col
+            as={motion.div}
             value={{ xs: 12, sm: 6, md: 4 }}
             display="flex"
             alignItems="center"
@@ -56,6 +105,10 @@ export default function HomeProjects() {
             flexDirection="column"
             margin="16px 0px"
             key={project.img}
+            initial="hidden"
+            custom={i}
+            animate={controls}
+            variants={variants}
           >
             <Card.Base>
               <a href={project.link}>

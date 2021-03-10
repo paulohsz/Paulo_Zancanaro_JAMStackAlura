@@ -14,6 +14,10 @@ const MenuWrapper = styled.nav`
 
   a:hover .hover-item{font-weight:bold}
 
+  h2 {
+    display: none;
+  }
+
 
 ${breakpointsMedia({
     md: css`
