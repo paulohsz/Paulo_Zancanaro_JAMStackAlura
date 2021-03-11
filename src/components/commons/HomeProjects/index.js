@@ -29,15 +29,15 @@ const projects = [
 const variants = {
   visible: (i) => ({
     opacity: 1,
-    y: '0',
+    x: '0',
     transition: {
       delay: ((i + 1) * 0.35),
     },
   }),
-  hidden: {
-    y: '50%',
+  hidden: (i) => ({
+    x: `${-(((i - 3) * 100))}%`,
     opacity: 0,
-  },
+  }),
 };
 
 export default function HomeProjects() {
