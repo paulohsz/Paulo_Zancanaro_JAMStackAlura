@@ -94,7 +94,7 @@ MenuWrapper.RightSide = styled.div`
           }
       `,
     md: css`
-        margin-left: 16px;
+        margin-left: 32px;
         &:after {
             margin-top: 0px;
             height: 2px;
