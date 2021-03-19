@@ -46,7 +46,7 @@ export default function WebsitePageWrapper({
         alignItems="stretch"
         backgroundColor={background.dark}
         {...(homeAbout && { polygonBottom: { lg: 75, xs: 50 } })}
-        {...(!homeAbout && { paddingBottom: 32 })}
+        {...(!homeAbout && { paddingBottom: { lg: 32, xs: 16 } })}
         {...pageBoxProps}
       >
         {menuProps.display && (
@@ -59,7 +59,7 @@ export default function WebsitePageWrapper({
       {children}
       <Footer
         contact={() => setModalState(true)}
-        polygonTopx={{ lg: homeAbout ? 75 : 50, xs: 50 }}
+        polygonTop={{ lg: 75, xs: 50 }}
       />
       {/*
         [SOLID]
