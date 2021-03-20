@@ -4,9 +4,14 @@ import Logo from '@theme/svg/Logo';
 import Text from '@components/foundation/Text';
 import { motion } from 'framer-motion';
 import MenuWrapper from './styles/MenuWrapper';
+import Link from '../Link';
 
 export default function Menu({ contact }) {
   const links = [
+    {
+      text: 'Home',
+      url: '/',
+    },
     {
       text: 'About',
       url: '/about',
@@ -48,9 +53,9 @@ export default function Menu({ contact }) {
             </Text>
             )}
             { !(typeof link.url === 'function') && (
-            <Text tag="a" href={link.url} title={link.text}>
+            <Link tag="a" href={link.url} title={link.text}>
               {link.text}
-            </Text>
+            </Link>
             )}
           </li>
         ))}
