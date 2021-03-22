@@ -1,7 +1,9 @@
 import React from 'react';
+import { Lottie } from '@crello/react-lottie';
 import Box from '@components/foundation/layout/Box';
 import Text from '@components/foundation/Text';
 import websitePageHOC from '@components/wrappers/WebsitePage/hoc';
+import P404 from '../src/components/animation/404.json';
 import Link from '../src/components/commons/Link';
 
 function Page404() {
@@ -13,21 +15,12 @@ function Page404() {
       alignItems="center"
       flexDirection="column"
     >
-      <Text
-        variant="title"
-        tag="h1"
-        color="secondary.main"
-        margin={0}
-      >
-        404
-      </Text>
-      <Text
-        variant="subTitle"
-        tag="span"
-        color="secondary.main"
-      >
-        Error - Page Not Found
-      </Text>
+      <Lottie
+        width="384px"
+        height="216px"
+        config={{ animationData: P404, loop: true, autoplay: true }}
+      />
+      {/* https://lottiefiles.com/4339-not-found */}
       <Text
         variant="paragraph1"
         tag="span"
@@ -36,15 +29,14 @@ function Page404() {
         textAlign="center"
       >
         Please Check the URL.
-        {' '}
         <br />
-        {' '}
         Otherwise,
         {' '}
         <Link
           href="/"
           alt="Home"
           color="secondary.main"
+          underline
         >
           click here
         </Link>
