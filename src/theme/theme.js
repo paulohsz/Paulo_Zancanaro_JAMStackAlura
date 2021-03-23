@@ -22,6 +22,10 @@ export const colorsType = {
         color: '#181B33',
         contrastText: '#F5F5F5',
       },
+      light: {
+        color: '#295984',
+        contrastText: '#F5F5F5',
+      },
     },
     quaternary: {
       main: {

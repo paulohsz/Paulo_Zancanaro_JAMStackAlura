@@ -4,27 +4,7 @@ import Grid from '@components/foundation/layout/Grid';
 import Card from '@components/commons/Card';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-
-const projects = [
-  {
-    title: 'Project title',
-    text: 'Lorem ipsum hendrerit ornare sapien ornare varius fringilla, sollicitudin accumsan mattis felis quisque duis gravida metus, ut justo aliquam donec habitant risus. consectetur torquent dui est justo varius est bibendum, placerat dapibus metus neque enim neque netus, curabitur etiam curabitur commodo lacinia varius.',
-    img: 'images/project-a.jpg',
-    link: '#',
-  },
-  {
-    title: 'Project title',
-    text: 'Habitant aenean per netus pharetra odio dictumst, bibendum iaculis est laoreet nam ultricies, porttitor congue feugiat nam a. vehicula placerat adipiscing platea netus curabitur, aenean sodales augue suspendisse purus fusce, vestibulum proin sagittis eget. tincidunt sed nec quisque.',
-    img: 'images/project-b.jpg',
-    link: '#',
-  },
-  {
-    title: 'Project title',
-    text: 'Dictumst primis interdum ut himenaeos turpis mollis lacus, porta tincidunt diam enim nam. pretium suspendisse phasellus leo ac varius euismod laoreet nibh scelerisque, lacinia ligula ad porta curabitur at leo sagittis, auctor tristique curabitur vivamus congue lacus senectus leo. congue donec habitant arcu urna lobortis posuere, purus libero tempus neque scelerisque convallis, varius eros ornare sapien risus.',
-    img: 'images/project-c.jpg',
-    link: '#',
-  },
-];
+import projects from '../../../database/db.json';
 
 const variants = {
   visible: (i) => ({
@@ -111,7 +91,7 @@ export default function HomeProjects() {
             variants={variants}
           >
             <Card.Base>
-              <a href={project.link}>
+              <Card.Link href={`/projects/${project.name}`}>
                 <Card.Img alt="Project" src={project.img} />
                 <Card.Title
                   variant="title"
@@ -134,7 +114,7 @@ export default function HomeProjects() {
                 >
                   {project.text}
                 </Card.Text>
-              </a>
+              </Card.Link>
             </Card.Base>
           </Grid.Col>
         ))}

@@ -4,9 +4,14 @@ import Logo from '@theme/svg/Logo';
 import Text from '@components/foundation/Text';
 import { motion } from 'framer-motion';
 import MenuWrapper from './styles/MenuWrapper';
+import Link from '../Link';
 
-export default function Menu({ contact }) {
+export default function Menu({ contact, home }) {
   const links = [
+    {
+      text: 'Home',
+      url: '/',
+    },
     {
       text: 'About',
       url: '/about',
@@ -20,7 +25,7 @@ export default function Menu({ contact }) {
   return (
     <MenuWrapper
       as={motion.nav}
-      initial="hidden"
+      initial={(home) ? 'hidden' : 'visible'}
       animate="visible"
       variants={{
         visible: {
@@ -48,9 +53,9 @@ export default function Menu({ contact }) {
             </Text>
             )}
             { !(typeof link.url === 'function') && (
-            <Text tag="a" href={link.url} title={link.text}>
+            <Link tag="a" href={link.url} title={link.text}>
               {link.text}
-            </Text>
+            </Link>
             )}
           </li>
         ))}
@@ -61,4 +66,5 @@ export default function Menu({ contact }) {
 
 Menu.propTypes = {
   contact: PropTypes.func.isRequired,
+  home: PropTypes.bool.isRequired,
 };

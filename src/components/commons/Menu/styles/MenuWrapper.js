@@ -94,7 +94,7 @@ MenuWrapper.RightSide = styled.div`
           }
       `,
     md: css`
-        margin-left: 16px;
+        margin-left: 32px;
         &:after {
             margin-top: 0px;
             height: 2px;
@@ -124,6 +124,7 @@ MenuWrapper.RightSide = styled.div`
     &:hover,
     &:focus {
       font-weight: 700;
+      opacity: 1;
       //color: ${({ theme }) => ((theme.colors.mode === 'light') ? theme.colors.tertiary.main.color : theme.colors.secondary.main.color)};
       &:after {
         width: 100%;
