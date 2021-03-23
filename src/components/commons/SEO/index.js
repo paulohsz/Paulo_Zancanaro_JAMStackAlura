@@ -9,7 +9,7 @@ export default function SEO({ headTitle }) {
     ? (`${headTitle} | ${pageTitleDefault}`)
     : (pageTitleDefault);
   const description = 'I’m currently live in Ireland. I’m graduated with a BSc in Computer Science, a Postgraduate in Banking IT and over 10 years of experience in software, system and web development in well-known companies such as ITAU Banking. Currently studying REACT/Next.js (front-end) and eager to put in practice all academic knowledge acquired.';
-  const image = 'https://www.alura.com.br/assets/img/alura-share.1571848411.png';
+  const image = 'https://profile-jamstack-git-main-paulohsz.vercel.app/images/Profile.jpg';
   const urlBase = 'https://profile-jamstack-git-main-paulohsz.vercel.app/';
 
   return (
