@@ -124,6 +124,7 @@ MenuWrapper.RightSide = styled.div`
     &:hover,
     &:focus {
       font-weight: 700;
+      opacity: 1;
       //color: ${({ theme }) => ((theme.colors.mode === 'light') ? theme.colors.tertiary.main.color : theme.colors.secondary.main.color)};
       &:after {
         width: 100%;
