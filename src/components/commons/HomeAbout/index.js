@@ -1,9 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import Text from '@components/foundation/Text';
 import Grid from '@components/foundation/layout/Grid';
 import { motion } from 'framer-motion';
 
-export default function HomeAbout() {
+export default function HomeAbout({ white }) {
   return (
     <Grid.Container
       marginTop={{ xs: '32px', md: '75px' }}
@@ -40,7 +42,7 @@ export default function HomeAbout() {
             <Text
               variant="title"
               tag="h1"
-              color="primary.main"
+              color={white ? 'secondary.main' : 'primary.main'}
               textAlign={{
                 xs: 'center',
                 md: 'left',
@@ -51,14 +53,14 @@ export default function HomeAbout() {
             <Text
               variant="paragraph1"
               tag="p"
-              color="tertiary.main"
+              color={white ? 'quaternary.dark' : 'tertiary.main'}
               marginBottom={60}
               textAlign="justify"
             >
-              I’m a cleaner and currently live in Ireland.
+              I’m currently live in Ireland.
               I’m graduated with a BSc in Computer Science, a Postgraduate in Banking IT,
               and over 10 years of experience in software, system and web development in
-              well-known companies such as ITAU Banking. Currently studying REACT/Next.js
+              well-known companies such as Itaú Banking. Currently studying REACT/Next.js
               (front-end) and eager to put in practice all academic knowledge acquired.
             </Text>
           </motion.div>
@@ -92,7 +94,7 @@ export default function HomeAbout() {
               boxShadow: '40px -28px 0px 10px #181B33',
               borderRadius: '16px',
             }}
-            src="images/ProfilePhoto.jpg"
+            src="/images/Profile.jpg"
             width="235"
             height="308"
           />
@@ -102,3 +104,11 @@ export default function HomeAbout() {
     </Grid.Container>
   );
 }
+
+HomeAbout.defaultProps = {
+  white: false, // About background (dark: blue, white: white)
+};
+
+HomeAbout.propTypes = {
+  white: PropTypes.bool,
+};

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Text from '@components/foundation/Text';
 import Box from '@components/foundation/layout/Box';
+import Link from '../Link';
 
 const Base = styled(Box)`
   overflow: hidden;
@@ -10,9 +11,10 @@ const Base = styled(Box)`
   transition: 0.4s ease all;
   flex-grow: 1;
   
-  a {
-    text-decoration: none;
-  }
+
+`;
+const LinkA = styled(Link)`
+  text-decoration: none;
 
   &:hover,
   &:focus {
@@ -34,6 +36,7 @@ const TextCard = styled(Text)`
 `;
 
 const Card = {
+  Link: LinkA,
   Base,
   Img,
   Title,

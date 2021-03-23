@@ -26,7 +26,7 @@ function FormContent() {
 
   function handleChange(event) {
     const fieldName = event.target.getAttribute('name');
-    console.log({ ...userInfo, [fieldName]: event.target.value });
+    // console.log({ ...userInfo, [fieldName]: event.target.value });
     setUserInfo({
       ...userInfo,
       [fieldName]: event.target.value,

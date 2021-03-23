@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import MenuWrapper from './styles/MenuWrapper';
 import Link from '../Link';
 
-export default function Menu({ contact }) {
+export default function Menu({ contact, home }) {
   const links = [
     {
       text: 'Home',
@@ -25,7 +25,7 @@ export default function Menu({ contact }) {
   return (
     <MenuWrapper
       as={motion.nav}
-      initial="hidden"
+      initial={(home) ? 'hidden' : 'visible'}
       animate="visible"
       variants={{
         visible: {
@@ -66,4 +66,5 @@ export default function Menu({ contact }) {
 
 Menu.propTypes = {
   contact: PropTypes.func.isRequired,
+  home: PropTypes.bool.isRequired,
 };

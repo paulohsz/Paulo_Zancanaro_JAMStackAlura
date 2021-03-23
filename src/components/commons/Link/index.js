@@ -2,17 +2,21 @@ import React from 'react';
 import NextLink from 'next/link';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import get from 'lodash/get';
 
 const StyledLink = styled.a`
 
-  text-decoration: none;
+  text-decoration: ${({ underline }) => (underline ? 'underline' : 'none')};
+  color: ${({ theme, color }) => (color
+    ? get(theme, `colors.${color}.color`)
+    : 'inherit')};
   opacity: 1;
   transition: opacity ${({ theme }) => theme.transition};
-  /*
+  
   &:hover,
   &:focus {
     opacity: .5;
-  } */
+  } 
 `;
 
 const Link = ({ children, href, ...props }) => (

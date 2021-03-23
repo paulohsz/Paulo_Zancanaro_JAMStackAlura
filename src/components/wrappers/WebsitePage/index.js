@@ -4,11 +4,11 @@ import { useTheme } from 'styled-components';
 import PropTypes from 'prop-types';
 import HomeAbout from '@components/commons/HomeAbout';
 import FormContact from '@components/patterns/FormContact';
+import SEO from '@components/commons/SEO';
 import Footer from '../../commons/Footer';
 import Menu from '../../commons/Menu';
 import Modal from '../../commons/Modal';
 import Box from '../../foundation/layout/Box';
-import SEO from '../../SEO';
 
 export const WebsitePageContext = createContext({
   toggleModalCadastro: () => {},
@@ -23,11 +23,9 @@ export default function WebsitePageWrapper({
 }) {
   const [isModalOpen, setModalState] = useState(false);
   const { background } = useTheme().colors;
-
   return (
     <WebsitePageContext.Provider
       value={{
-        teste: true,
         toggleModalCadastro: () => {
           setModalState(!isModalOpen);
         },
@@ -50,7 +48,10 @@ export default function WebsitePageWrapper({
         {...pageBoxProps}
       >
         {menuProps.display && (
-          <Menu contact={() => setModalState(true)} />
+          <Menu
+            contact={() => setModalState(true)}
+            home={(seoProps.headTitle === 'Home')}
+          />
         )}
         {homeAbout && (
           <HomeAbout />

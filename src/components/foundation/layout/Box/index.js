@@ -7,6 +7,7 @@ const Box = styled.div`
   ${propToStyle('flexDirection')}
   ${propToStyle('justifyContent')}
   ${propToStyle('textAlign')}
+  ${propToStyle('alignItems')}
   ${propToStyle('flexGrow')}
   ${propToStyle('flex')}
   ${propToStyle('flexWrap')}
@@ -19,6 +20,8 @@ const Box = styled.div`
 
   ${propToStyle('margin')}
   ${propToStyle('padding')}
+  ${propToStyle('paddingTop')}
+  ${propToStyle('paddingBottom')}
   
   ${polygonClip('polygonBottom')}
   ${polygonClip('polygonTop')}
