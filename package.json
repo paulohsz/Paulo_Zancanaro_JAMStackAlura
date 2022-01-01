@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@types/node": "^14.14.39",
-    "@types/react": "^17.0.3",
+    "@types/react": "^17.0.38",
     "babel-plugin-styled-components": "^1.8.0",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.25.0",
